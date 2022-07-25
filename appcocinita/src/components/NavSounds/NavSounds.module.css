@@ -1,0 +1,120 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+}
+.contNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    z-index: 3;
+}
+/* Estilos contenedr hamburguesa */
+.contBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 20rem;
+    overflow: visible;
+    z-index: 1;
+    position: absolute;
+    top: 6rem;
+}
+.contBurger img {
+    object-fit: cover;
+    max-width: 100%;
+    min-height: 100%;
+}
+.contBurger p {
+   bottom: 6rem;
+   right: 5.5rem;
+   position: absolute;
+   text-decoration: underline;
+   color: white;
+   font-size: 0.9rem;
+}
+/* Estilos parte central del nav de los sonidos */
+.contTitle {
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    display: grid;
+    place-items: center;
+    background-color: #80808071;
+    width: 18rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+.text h1 {
+    color: #0000FF;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+/* Estilos botones retor nav de los sonidos */
+.button {
+    display: grid;
+    place-items: center;
+    background-color: #CCCCCC;
+    height: 3rem;
+    width: 3rem;
+    box-shadow: 2px 2px 0px #808080, -20px -20px 60px #ffffff00;
+    padding: 5px;
+    border: 2px solid #808080;
+}
+.insideButton {
+    height: 100%;
+    width: 100%;
+    box-shadow: 2px 2px 0px #808080 inset;
+    border: 2px solid #808080;
+}
+
+/* Estilos movil y tablet */
+
+@media (max-width: 768px){
+  .button {
+    display: none;
+  }
+  .text {
+    display: none;
+  }
+  .contTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    width: 100%;
+}
+.contNav {
+    width: 100%;
+    margin-top: 0;
+}
+.contBurger {
+    height: 10rem;
+    width: 100%;
+    position: relative;
+    top: 0rem;
+}
+.contBurger p {
+    top: -1rem;
+    right: 4.5rem;
+    position: absolute;
+    text-decoration: underline;
+    color: #28201A;
+    font-size: 0.5rem;
+ }
+}

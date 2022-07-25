@@ -1,0 +1,90 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+/* Estilos botones retor nav de los sonidos */
+.containerButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.containerButtonsBottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+#buttonSpotify {
+    display: none;
+}
+.button {
+    display: grid;
+    place-items: center;
+    background-color: #CCCCCC;
+    height: 3.5rem;
+    width: 12.3rem;
+    box-shadow: 2px 2px 0px #808080, -20px -20px 60px #ffffff00;
+    padding: 3px;
+    border: 2px solid #808080;
+    box-sizing: border-box;
+    transition: 0.3s all;
+}
+.button:hover {
+    transform: scale(0.9);
+}
+.insideButton {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    box-shadow: 2px 2px 0px #808080 inset;
+    border: 2px solid #808080;
+    box-sizing: border-box;
+}
+/* Estilos texto dentro de los botones del nav bar de abajo */
+.insideButton p {
+    color: #0000FF;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.3rem;
+} 
+.insideButton:hover p {
+    color: #4a00cb;
+    cursor: pointer;
+} 
+
+/* Estilso tablet y movil */
+
+@media (max-width: 768px){
+    .containerButtons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    .button {
+        width: 100%;
+        margin-bottom: 0.4rem;
+    }
+    .insideButton p {
+        font-size: 1.2rem;
+    } 
+    .containerButtonsBottom {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 10px;
+        min-width: 100%;
+        height: auto;
+    }
+    .containerButtonsBottom .button {
+        height: 3rem;
+        width: 20%;
+    }
+    #buttonSpotify {
+        display: grid;
+    }
+  }

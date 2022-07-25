@@ -1,0 +1,41 @@
+/* .container {
+
+} */
+/* Estilos botones footer */
+.buttonTop {
+    display: flex;
+    justify-content: center;
+}
+.buttonTop p {
+    text-align: center;
+    text-decoration: underline;
+}
+.buttonTop p:first-child {
+    background-color: #28201A;
+    color: #EBC83A;
+    padding: 0 3rem;
+    margin-right: 5px;
+}
+/* Estilos texto copyright footer */
+.bottomText p {
+    text-align: center;
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+
+/* Estilos para celular y tablet */
+
+@media (max-width: 768px){
+    .container {
+        width: 100%;
+    }
+    .bottomText p {
+        display: none;
+    }
+    .buttonTop p {
+        font-size: 50%;
+    }
+    .buttonTop p:first-child {
+        padding: 0 1.5rem;
+    }
+}
