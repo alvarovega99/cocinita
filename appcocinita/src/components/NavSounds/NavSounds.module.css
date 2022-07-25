@@ -50,10 +50,13 @@
 .logo {
     display: grid;
     place-items: center;
-    background-color: #80808071;
     width: 18rem;
     height: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+.logo img {
+   object-fit: cover;
+   width: 100%;
 }
 .text h1 {
     color: #0000FF;
@@ -76,11 +79,36 @@
     border: 2px solid #808080;
 }
 .insideButton {
+    display: grid;
+    place-items: center;
     height: 100%;
     width: 100%;
     box-shadow: 2px 2px 0px #808080 inset;
     border: 2px solid #808080;
 }
+.insideButton img {
+   object-fit: cover;
+   width: 75%;
+}
+.insideButton a {
+    display: grid;
+    place-items: center;
+    object-fit: cover;
+ }
+
+ /* Estilos vokumen desactivado */
+
+ .desactivado {
+    opacity: 40%;
+    position: relative;
+ }
+ .desactivado::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 10px;
+    background-color: #28201A;
+ }
 
 /* Estilos movil y tablet */
 
