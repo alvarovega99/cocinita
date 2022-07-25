@@ -69,11 +69,15 @@
     margin: 0.5rem 0 0.3rem 0;
     text-align: center;
 }
+/* Ocultar nanRedesSociales */
+.navBottom {
+    display: none;
+}
 
 @media (max-width: 768px){
     .container {
         width: 280px;
-        height: 460px;
+        height: 490px;
     } 
     .containerContent {
         flex-direction: column;
@@ -93,5 +97,9 @@
     }
     .title p {
         font-size: 1rem;
+    }
+    .navBottom {
+        display: flex;
+        width: 90%;
     }
 }

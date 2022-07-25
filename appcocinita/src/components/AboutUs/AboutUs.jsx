@@ -2,6 +2,7 @@ import React from 'react'
 import style from '../AboutUs/AboutUs.module.css'
 import NavSounds from '../NavSounds/NavSounds'
 import Footer from '../Footer/Footer'
+import NavBottom from '../NavBottom/NavBottom'
 import about from '../../assets/about.webp'
 
 const AboutUs = () => {
@@ -41,6 +42,10 @@ const AboutUs = () => {
 
                 </div>
             </div>
+
+        </div>
+        <div className={style.navBottom}>
+          <NavBottom/>
         </div>
         <Footer/>
     </div>

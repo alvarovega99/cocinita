@@ -55,6 +55,7 @@
     margin: 0;
     font-weight: bold;
     text-decoration: underline;
+    line-height: 200%;
  }
 /* Contenedor general del contenido del about */
 .containerContent {
@@ -78,11 +79,15 @@
     text-align: center;
     margin: 0.5rem 0 1rem 0;
 }
+/* Ocultar nanRedesSociales */
+.navBottom {
+    display: none;
+}
 
 @media (max-width: 768px){
     .container {
         width: 280px;
-        height: 460px;
+        height: 490px;
     } 
     .containerContent {
         flex-direction: column;
@@ -92,15 +97,27 @@
         height: 4rem;
     }
     .containerText {
+        flex-direction: column;
         width: 100%;
     }
     .containerText p {
         font-size: 7px;
     }
     .insideButton {
-        padding: 0 1rem 2rem 1rem;
+        padding: 0 1rem 1rem 1rem;
     }
     .title p {
         font-size: 1rem;
     }
+    .navBottom {
+        display: flex;
+        width: 90%;
+    }
+    .container p {
+        font-size: 0.6rem;
+    }
+    .containerText p:last-child {
+        font-size: 0.5rem;
+        line-height: 130%;
+     }
 }

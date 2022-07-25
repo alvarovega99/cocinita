@@ -35,6 +35,7 @@
     transform: scale(0.9);
 }
 .insideButton {
+    padding: 2px 0 0 2px;
     display: grid;
     place-items: center;
     height: 100%;
@@ -42,6 +43,15 @@
     box-shadow: 2px 2px 0px #808080 inset;
     border: 2px solid #808080;
     box-sizing: border-box;
+}
+.insideButton a {
+    height: 100%;
+    width: 100%;
+}
+.insideButton img {
+    object-fit: cover;
+    width: 15%;
+    max-height: 100%;
 }
 /* Estilos texto dentro de los botones del nav bar de abajo */
 .insideButton p {
@@ -73,6 +83,11 @@
     .insideButton p {
         font-size: 1.2rem;
     } 
+    .insideButton img {
+        object-fit: cover;
+        width: 60%;
+        max-height: 100%;
+    }
     .containerButtonsBottom {
         display: flex;
         justify-content: space-evenly;

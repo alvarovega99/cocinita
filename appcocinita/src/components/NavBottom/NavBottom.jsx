@@ -2,10 +2,19 @@ import React from 'react'
 import style from '../NavBottom/NavBottom.module.css'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
+import facebook from '../../assets/facebook.webp'
+import instagram from '../../assets/instagram.webp'
+import whatsapp from '../../assets/whatsapp.webp'
+import spotifyazul from '../../assets/spotifyazul.webp'
 
 const NavBottom = () => {
+
+    const home = '/'
+    const ruta = window.location.pathname
+
   return (
     <div className={style.container}>
+        { ruta === home ?
         <div className={style.containerButtons}>
             <Link to='/location'>
             <div className={style.button}>
@@ -15,12 +24,13 @@ const NavBottom = () => {
             </div>
             </Link>
 
-
+            <a href='https://www.thecocinitamiami.getsauce.com/order-online' target='_blank' rel="noreferrer">
             <div className={style.button}>
             <div className={style.insideButton}>
                 <p>Order</p>
             </div>
             </div>
+            </a>
 
             <Link to='/about'>
             <div className={style.button}>
@@ -29,37 +39,41 @@ const NavBottom = () => {
             </div>
             </div>
             </Link>
-        </div>
+        </div> : null
+        }   
+
             <div className={style.containerButtonsBottom}>
-                
-            <div className={style.button}>
-            <div className={style.insideButton}>
-            1
-            </div>
-            </div>
 
-            <div className={style.button}>
-            <div className={style.insideButton}>
-            2
-            </div>
-            </div>
+                <div id={style.buttonSpotify} className={style.button}>
+                <div className={style.insideButton}>
+                    <img src={spotifyazul} alt='' />
+                </div>
+                </div>
 
-            <div className={style.button}>
-            <div className={style.insideButton}>
-            3
-            </div>
-            </div>
+                <div className={style.button}>
+                <a className={style.insideButton} href='https://www.facebook.com/thecocinitamiami' target='_blank' rel="noreferrer">    
+                    <img src={facebook} alt='' />
+                </a>
+                </div>
 
-            <div id={style.buttonSpotify} className={style.button}>
-            <div className={style.insideButton}>
-            4
-            </div>
-            </div>
+                <div className={style.button}>
+                <a className={style.insideButton} href='https://www.instagram.com/thecocinitamiami' target='_blank' rel="noreferrer">
+                    <img src={instagram} alt='' />
+                </a>
+                </div>
+
+                <div className={style.button}>
+                <div className={style.insideButton}>
+                    <img src={whatsapp} alt='' />
+                </div>
+                </div>
 
             </div>
-            <div>
+            {ruta === home ?
+            <div className={style.footer}>
                 <Footer/>
-            </div>
+            </div> : null
+            }
     </div>
     
   )

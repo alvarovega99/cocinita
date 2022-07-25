@@ -102,13 +102,6 @@
     opacity: 40%;
     position: relative;
  }
- .desactivado::before {
-    position: absolute;
-    content: '';
-    width: 2px;
-    height: 10px;
-    background-color: #28201A;
- }
 
 /* Estilos movil y tablet */
 

@@ -30,7 +30,7 @@ const NavSounds = () => {
         <div onClick={() => sonido(false)} className={style.insideButton}>
           <img src={volumen} alt='' className={`${state === false ? style.desactivado : ''}`}/>
           {state === true ?
-          <audio autoPlay loop>
+          <audio aria-valuemax={10} preload='auto' autoPlay loop>
             <source src={musica} type="audio/wav"/>
             Tu navegador no soporta el tag audio
           </audio> :
