@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import style from '../NavSounds/NavSounds.module.css'
 import { Link } from 'react-router-dom'
 import hambuguesa from '../../assets/burger.webp'
@@ -6,22 +6,12 @@ import logoCocinita from '../../assets/logoCocinita.webp'
 import homeLogo from '../../assets/home.webp' 
 import spotify from '../../assets/spotify.webp'
 import volumen from '../../assets/volumen.webp'
-import musica from '../../assets/musica.wav'
+/* import musica from '../../assets/musica.wav' */
 
-const NavSounds = () => {
-
-  const [state, setState] = useState(true)
+const NavSounds = ({sonido, state}) => {
 
     const home = '/'
     const ruta = window.location.pathname
-
-    const sonido = () => {
-      if (state === true){
-        setState(false)
-      } else {
-        setState(true)
-      }
-    }
 
   return (
     <div className={style.container}>
@@ -29,13 +19,6 @@ const NavSounds = () => {
       <div className={style.button}>
         <div onClick={() => sonido(false)} className={style.insideButton}>
           <img src={volumen} alt='' className={`${state === false ? style.desactivado : ''}`}/>
-          {state === true ?
-          <audio aria-valuemax={10} preload='auto' autoPlay loop>
-            <source src={musica} type="audio/wav"/>
-            Tu navegador no soporta el tag audio
-          </audio> :
-          null
-          }
         </div>
       </div>
 
@@ -54,14 +37,12 @@ const NavSounds = () => {
         </div>
 
           <div className={style.button}>
-            <div className={style.insideButton}>
+          <Link className={style.insideButton} to='/'>
               { ruta === home ?
                 <img src={spotify} alt='' /> :
-                <Link to='/'>
                 <img src={homeLogo} alt='' />
-                </Link>
               }
-            </div>
+          </Link>
           </div>
       </div>
       {

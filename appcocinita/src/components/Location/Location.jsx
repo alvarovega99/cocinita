@@ -4,10 +4,10 @@ import NavSounds from '../NavSounds/NavSounds'
 import NavBottom from '../NavBottom/NavBottom'
 import Footer from '../Footer/Footer'
 
-const Location = () => {
+const Location = ({sonido, state}) => {
   return (
     <div className={style.container}>
-      <NavSounds/>
+      <NavSounds state={state} sonido={sonido}/>
       <div className={style.button}>
             <div className={style.insideButton}>
 

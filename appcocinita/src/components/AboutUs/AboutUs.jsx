@@ -5,10 +5,10 @@ import Footer from '../Footer/Footer'
 import NavBottom from '../NavBottom/NavBottom'
 import about from '../../assets/about.webp'
 
-const AboutUs = () => {
+const AboutUs = ({sonido, state}) => {
   return (
     <div className={style.container}>
-        <NavSounds/>
+        <NavSounds state={state} sonido={sonido}/>
         <div className={style.button}>
             <div className={style.insideButton}>
                 <div className={style.title}>

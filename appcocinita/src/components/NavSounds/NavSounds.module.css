@@ -77,6 +77,14 @@
     box-shadow: 2px 2px 0px #808080, -20px -20px 60px #ffffff00;
     padding: 5px;
     border: 2px solid #808080;
+    transition: 0.3s all;
+}
+.button:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.button:hover .insideButton img {
+    transform: scale(0.8);
 }
 .insideButton {
     display: grid;
@@ -87,6 +95,7 @@
     border: 2px solid #808080;
 }
 .insideButton img {
+    transition: 0.3s all;
    object-fit: cover;
    width: 75%;
 }
@@ -101,6 +110,8 @@
  .desactivado {
     opacity: 40%;
     position: relative;
+    transition: 0.2s all;
+    transform: scale(0.8);
  }
 
 /* Estilos movil y tablet */

@@ -63,9 +63,9 @@ const NavBottom = () => {
                 </div>
 
                 <div className={style.button}>
-                <div className={style.insideButton}>
+                <a className={style.insideButton} href='https://api.whatsapp.com/send/?phone=17866303437&text=Hola+vengo+desde+la+web+&#127828;&type=phone_number&app_absent=0' target='_blank' rel="noreferrer">
                     <img src={whatsapp} alt='' />
-                </div>
+                </a>
                 </div>
 
             </div>
