@@ -79,18 +79,21 @@
     border: 2px solid #808080;
     transition: 0.3s all;
 }
-.button:hover {
+/* .button:hover {
     transform: scale(0.9);
-    cursor: pointer;
-}
-.button:hover .insideButton img {
+} */
+/* .button:hover .insideButton img {
     transform: scale(0.8);
-}
+} */
 .insideButton {
     display: grid;
     place-items: center;
     height: 100%;
     width: 100%;
+/*     box-shadow: 2px 2px 0px #808080 inset;
+    border: 2px solid #808080; */
+}
+.button:hover .insideButton {
     box-shadow: 2px 2px 0px #808080 inset;
     border: 2px solid #808080;
 }

@@ -29,11 +29,7 @@
     padding: 3px;
     border: 2px solid #808080;
     box-sizing: border-box;
-    transition: 0.3s all;
-}
-.button:hover {
-    transform: scale(0.9);
-    cursor: pointer;
+    transition: 0.1s all; 
 }
 .insideButton {
     padding: 2px 0 0 2px;
@@ -41,9 +37,13 @@
     place-items: center;
     height: 100%;
     width: 100%;
+    /* box-shadow: 2px 2px 0px #808080 inset;
+    border: 2px solid #808080; */
+    box-sizing: border-box;
+}
+.button:hover .insideButton {
     box-shadow: 2px 2px 0px #808080 inset;
     border: 2px solid #808080;
-    box-sizing: border-box;
 }
 .insideButton a {
     height: 100%;
