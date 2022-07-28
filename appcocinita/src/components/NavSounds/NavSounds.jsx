@@ -31,7 +31,7 @@ const NavSounds = ({sonido, state}) => {
           {
             ruta === home ?
           <div className={style.text}>
-            <h1>796-630-2437</h1>
+            <h1>+1 (786) 630-3437</h1>
           </div> : null
           }
         </div>
