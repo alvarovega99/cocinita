@@ -3,7 +3,7 @@ import style from '../Location/Location.module.css'
 import NavSounds from '../NavSounds/NavSounds'
 import NavBottom from '../NavBottom/NavBottom'
 import Footer from '../Footer/Footer'
-
+import Map from '../Map/Map'
 const Location = ({sonido, state}) => {
   return (
     <div className={style.container}>
@@ -18,7 +18,7 @@ const Location = ({sonido, state}) => {
                 <div className={style.containerContent}>
 
                   <div className={style.contMaps}>
-           
+                    <Map />
                   </div>
                   <div className={style.containerText}>
                     <p>

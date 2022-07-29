@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.57a91d54.css",
+    "main.js": "/static/js/main.a9f8495b.js",
+    "static/js/787.7639973f.chunk.js": "/static/js/787.7639973f.chunk.js",
+    "static/media/musica.wav": "/static/media/musica.b7f6962bc1ff6d55d5f0.wav",
+    "static/media/about.webp": "/static/media/about.ad4fc225341372fb09f6.webp",
+    "static/media/burger.webp": "/static/media/burger.4758521d1013f1c2f942.webp",
+    "static/media/fondoHamburguesas.webp": "/static/media/fondoHamburguesas.15dcf6aaaeeebbb6addb.webp",
+    "static/media/logoCocinita.webp": "/static/media/logoCocinita.5f20f80824176e42b08b.webp",
+    "static/media/whatsapp.webp": "/static/media/whatsapp.acdbda9edfb4732863b1.webp",
+    "static/media/spotifyazul.webp": "/static/media/spotifyazul.d46d433756e4cc87e129.webp",
+    "static/media/instagram.webp": "/static/media/instagram.84b0fddbbf065ebbf2e6.webp",
+    "static/media/facebook.webp": "/static/media/facebook.a59d4bb4083f38c78f35.webp",
+    "index.html": "/index.html",
+    "static/media/spotify.webp": "/static/media/spotify.7a0f47be8d9111f5f0f4.webp",
+    "static/media/volumen.webp": "/static/media/volumen.fde67c9b0b6140498344.webp",
+    "static/media/home.webp": "/static/media/home.eb9005b20cb3de123908.webp",
+    "main.57a91d54.css.map": "/static/css/main.57a91d54.css.map",
+    "main.a9f8495b.js.map": "/static/js/main.a9f8495b.js.map",
+    "787.7639973f.chunk.js.map": "/static/js/787.7639973f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57a91d54.css",
+    "static/js/main.a9f8495b.js"
+  ]
+}
