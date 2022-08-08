@@ -27,6 +27,7 @@ function App() {
           </audio> :
           null
           }
+
       <Routes>
         <Route path='/' element={<Home state={state} sonido={sonido}/>}/>
         <Route exact path='/location' element={<Location state={state} sonido={sonido}/>}/>
