@@ -1,38 +1,31 @@
-// Call Express Api.
-var express=require('express'),
-  
-// Call express Session Api.
-session = require('express-session'),
-  
-app=express();
-  
-// Session Setup
-app.use (
-    session ({
-        secret: 'secret',
-        resave: true,
-        saveUninitialized: true
-    })
-);
-  
-// Get function in which send session as routes.
-app.get('/session', function(req, res, next) {
-  
-    if (req.session.views) {
-          
-      // Increment the number of views.
-      req.session.views++
-  
-      // Print the views.
-      res.status(200).json({views: req.session.views}) 
-      res.end()
-    } else {
-      req.session.views = 1
-      res.end(' New session is started')
-    }
-})
+const express = require('express');
+const morgan = require('morgan'); // middleware para peticiones HTTP dregistra las request
+const cors = require('cors');
+const routes = require('./routes/index');
 
-app.listen(4500,function(){
-    console.log("Express Started on Port 3000");
+const server = express();
+// eslint-disable-next-line import/order
+const http = require('http').createServer(server);
+
+server.name = 'API';
+server.use(cors());
+server.use(express.json()); // configuro para poder hacer peticiones json para
+server.use(morgan('dev')); // llamo a morgan para las request
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  next();
 });
 
+server.use('/', routes);
+
+// Endware para caturar error
+server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
+  const status = err.status || 500;
+  const message = err.message || err;
+  res.status(status).send({ message });
+});
+
+module.exports = http;

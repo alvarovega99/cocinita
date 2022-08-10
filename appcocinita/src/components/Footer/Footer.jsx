@@ -8,23 +8,25 @@ const Footer = () => {
   //get data view from server
   const getData = async () => {
     console.log('get data')
-    const response = await axios.get('http://localhost:4500/session')
-    return response.data
+    return await axios.get('http://localhost:4500/views/increment')
   }
   const [data, setData] = React.useState(0)
 
   React.useEffect(() => {
-    getData().then(dataApi => {
-      setData(dataApi)
-    })
-  } , [])
+    if (data === 0) {
+      getData().then(res => {
+        setData(res.data.views)
+      })
+    }
+
+  } , [data])
   return (
     <div className={style.container}>
         <div className={style.buttonTop}>
-            <p>${data}</p>
+            <p>00000000000{data}</p>
             <p>VISITS FROM FRIENDS</p>
         </div>
-        <div className={style.bottomText}>
+        <div className={data}>
             <p>PLEASE NOTE OUR FOOD MAY CONTAIN AND/OR SHARE EQUIPMENT WITH SOY, WHEAT, AND NUTS.<br/>GET MORE INFORMATION ON IMPOSSIBLE FOODS.</p>
             <p>COPYRIGHT © 2022 THE COCINITA</p>
         </div>
