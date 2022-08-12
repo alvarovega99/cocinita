@@ -2,8 +2,6 @@ import React from 'react'
 import style from '../Footer/Footer.module.css'
 import axios from 'axios'
 
-
-
 const Footer = () => {
   const defaultApi = process.env.REACT_APP_DEFAULT_API
   //get data view from server
@@ -13,14 +11,19 @@ const Footer = () => {
   }
   const [data, setData] = React.useState(0)
 
-  React.useEffect(() => {
-    if (data === 0) {
-      getData().then(res => {
-        setData(res.data.views)
-      })
-    }
+  const home = '/'
+  const ruta = window.location.pathname
 
+  React.useEffect(() => {
+    if(ruta === home){
+      if (data === 0) {
+        getData().then(res => {
+          setData(res.data.views)
+        })
+      }
+    }
   } , [data])
+
   return (
     <div className={style.container}>
         <div className={style.buttonTop}>
