@@ -47,7 +47,7 @@ const NavSounds = ({sonido, state}) => {
                   <img src={spotify} alt='' />
                 
               </a> </div>: 
-              <Link to='/'>
+              <Link to='/' className={style.insideButton}>
                 <div className={style.insideButton}>
                   <img src={homeLogo} alt='' />
                 </div>

@@ -7,22 +7,17 @@ const Footer = () => {
   //get data view from server
   const getData = async () => {
     console.log('get data')
-    return await axios.get(`${defaultApi}/views/increment`)
+    return await axios.get(`${defaultApi}/views`)
   }
   const [data, setData] = React.useState(0)
 
-  const home = '/'
-  const ruta = window.location.pathname
 
   React.useEffect(() => {
-    if(ruta === home){
-      if (data === 0) {
         getData().then(res => {
-          setData(res.data.views)
+          console.log(res.data)
+          setData(res.data[0].views -1)
         })
-      }
-    }
-  } , [data])
+  } , [])
 
   return (
     <div className={style.container}>
